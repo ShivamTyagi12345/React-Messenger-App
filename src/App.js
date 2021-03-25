@@ -9,6 +9,18 @@ import WelcomeDialogBox from './WelcomeDialogBox'
 import db from "./firebase.js";
 import firebase from "firebase";
 
+
+
+// tyagi
+  // client/src/App.js
+   // client/src/App.js
+import Emoji from "./emoji";
+  //  import React, { Component } from 'react';
+  //  import { Picker, emojiIndex } from 'emoji-mart';
+
+// tyagi
+
+
 function App() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
@@ -78,8 +90,18 @@ function App() {
   //   but=<Input className={`input ${dark?"dark_input":""}`} placeholder="Write Your Message" value={input} onChange={event=>setInput(event.target.value)} />
   // }
 
+
+
+
+  // tyagi
+
+ 
   return (
     <div className="App">
+
+
+
+
       <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
         <div className="flex1">
           <img className="Logo"  aspect-ratio="1/1" height="auto" width="82px"  src={logo} alt="messenger-logo" />
@@ -88,6 +110,7 @@ function App() {
           <h1 className={`messenger ${dark ? "blackName" : ""}`}>Messenger</h1>
         </div>
         <div className="flex2">
+
           <Button
             title="toggle Dark Mode"
             variant="contained"
@@ -99,6 +122,8 @@ function App() {
         </div>
       </nav>
       <div className="scroll">
+      <Emoji/>
+
         <br />
         <br />
         <br />
@@ -119,9 +144,12 @@ function App() {
         <br />
         <br />
       </div>
+
       <div ref={messagesEndRef} />
       <footer className={`${dark ? "footer_dark" : ""}`}>
+
         <form>
+        
           <FormControl>{but}</FormControl>
           <Button
             className="iconButton"
@@ -137,7 +165,9 @@ function App() {
       <WelcomeDialogBox open={openWelcomeDialogBox} close={()=>setOpenWelcomeDialogBox(false)} setUsername={setUsername}/>
     </div>
   );
-}
+        }
+      
+
 
 // keys generator:- every new call to this function will give numbs like 0,1,2,3....
 const genKey = (function () {
